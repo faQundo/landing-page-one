@@ -51,11 +51,14 @@
         </a>
       </drop-down>
       <drop-down
-              tag="li"
-              title="Examples"
-              icon="now-ui-icons design_image"
-              class="nav-item"
+        tag="li"
+        title="Examples"
+        icon="now-ui-icons design_image"
+        class="nav-item"
       >
+        <nav-link to="/beer">
+          <i class="now-ui-icons shopping_shop"></i> Beer
+        </nav-link>
         <nav-link to="/landing">
           <i class="now-ui-icons education_paper"></i> Landing
         </nav-link>
@@ -121,20 +124,20 @@
 </template>
 
 <script>
-import { DropDown, Navbar, NavLink } from '@/components';
-import { Popover } from 'element-ui';
+import { DropDown, Navbar, NavLink } from "@/components";
+import { Popover } from "element-ui";
 export default {
-  name: 'main-navbar',
+  name: "main-navbar",
   props: {
     transparent: Boolean,
-    colorOnScroll: Number
+    colorOnScroll: Number,
   },
   components: {
     DropDown,
     Navbar,
     NavLink,
-    [Popover.name]: Popover
-  }
+    [Popover.name]: Popover,
+  },
 };
 </script>
 

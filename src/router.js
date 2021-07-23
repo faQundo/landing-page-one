@@ -6,6 +6,7 @@ import Login from './pages/Login.vue';
 import Profile from './pages/Profile.vue';
 import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
+import Beer from './pages/Beer.vue';
 
 Vue.use(Router);
 
@@ -16,6 +17,15 @@ export default new Router({
       path: '/',
       name: 'index',
       components: { default: Index, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: 'black' }
+      }
+    },
+    {
+      path: '/beer',
+      name: 'beer',
+      components: { default: Beer, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }
